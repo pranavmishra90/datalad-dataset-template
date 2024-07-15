@@ -5,6 +5,7 @@ function dataset_root() {
 		cd "$(git rev-parse --show-toplevel)"
 	else
 		echo "Not inside a Git repository"
+		exit 1
 	fi
 }
 
