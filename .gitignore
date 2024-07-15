@@ -12,3 +12,8 @@
 # Local environment (if desired)
 env/*
 !env/readme.md
+
+# Quarto
+/.quarto/
+/_site/
+/_book/
