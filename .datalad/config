@@ -3,3 +3,8 @@
 
 [datalad "ui"]
         suppress-similar-results = off
+
+
+
+[push]
+        autoSetupRemote = true
