@@ -10,9 +10,26 @@ function dataset_root() {
 	fi
 }
 
+echo "Starting the quarto render using the production profile"
+echo "-----------------------------------------------------------"
 bash ./code/shell/quarto-render-prod.sh
 
 # Push the current branch to the origin remote
+echo "Publish to origin"
+echo "----------------------------------------------"
 BRANCH_NAME=$(git branch --show-current)
 
-git push origin $CURRENT_BRANCH
+echo "Publishing $BRANCH_NAME to 'origin'"
+
+git push origin $BRANCH_NAME
+
+# Cleanup
+echo "Cleanup"
+echo "----------------------------------------------"
+echo "Deleting $BRANCH_NAME and switching to main. Deleting notebook/_site"
+
+git checkout main
+git branch -D $BRANCH_NAME
+rm -rf notebook/_site
+
+echo "Done."

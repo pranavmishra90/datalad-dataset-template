@@ -10,7 +10,7 @@ function dataset_root() {
 	fi
 }
 
-DATE=$(date +%Y-%m-%d)
+DATE=$(date +%Y_%m_%d)
 
 ## Begin script
 
