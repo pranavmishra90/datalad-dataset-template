@@ -1,0 +1,73 @@
+project:
+    type: website
+    output-dir: ./notebook/_site
+    render:
+        - "*.qmd"
+        - "*.md"
+        - "docs/"
+
+        # Do not render
+        - "!code/"
+  preview:
+    port: 3334
+    browser: true
+    watch-inputs: true
+    timeout: 300
+
+website:
+  title: "Facsimilab - Template for Datalad Datasets"
+  navbar:
+    search: true
+  open-graph: true
+  sidebar:
+    style: "docked"
+    contents: auto
+  reader-mode: true
+  repo-url: https://github.com/FacsimiLab/datalad-dataset-template
+  repo-actions: [issue, edit]
+  repo-link-target: "_blank"
+  page-footer: "Copyright 2024: Pranav Mishra"
+
+
+bibliography:
+  - ./notebook/references.bib
+csl: ./notebook/ama.csl
+
+citation: false
+google-scholar: true
+
+
+affiliations:
+  - id: rushortho
+    name: Dept of Orthopedic Surgery, Rush University
+    department: Orthopedic Surgery
+    city: Chicago
+    region: IL
+    country: USA
+    postal-code: 60612
+    affiliation-url: https://rushu.rush.edu
+    
+  - id: rushsurg
+    name: Dept of Surgery, Rush University
+    department: Surgery
+    address: 1735 W Harrison St, Ste 563
+    city: Chicago
+    region: IL
+    country: USA
+    postal-code: 60612
+    affiliation-url: https://rushu.rush.edu
+
+  - id: rushpeds
+    name: Dept of Pediatrics, Rush University
+    department: Pediatrics
+    address: 1735 W Harrison St, Ste 563
+    city: Chicago
+    region: IL
+    country: USA
+    postal-code: 60612
+    affiliation-url: https://rushu.rush.edu
+
+execute:
+  freeze: auto
+  cache: true
+  error: true

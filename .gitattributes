@@ -4,12 +4,15 @@
 **/.git* annex.largefiles=nothing
 metadata/aggregate* annex.largefiles=nothing
 metadata/objects/** annex.largefile=(anything)
+
+
+
+
 # Directories to exclude from git-annex
 #------------------------------------------------
 
 **/code annex.largefiles=nothing
-**/doc annex.largefiles=nothing
-**/deploy annex.largefiles=nothing
+**/docs annex.largefiles=nothing
 
 # Filetypes to exclude from git-annex
 #------------------------------------------------
