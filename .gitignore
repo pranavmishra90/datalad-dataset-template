@@ -17,6 +17,7 @@ env/*
 /.quarto/
 /_site/
 /_book/
+/_freeze/
 
 # Always include in git
 **/.gitkeep

@@ -21,6 +21,8 @@ website:
         left:
             - text: Home
               href: readme.md
+            - text: About
+              href: notebook/about.qmd
     open-graph: true
     sidebar:
         style: "docked"
