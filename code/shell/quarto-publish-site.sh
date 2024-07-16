@@ -10,6 +10,8 @@ function dataset_root() {
 	fi
 }
 
+DATE=$(date +%Y_%m_%d)
+
 echo "Starting the quarto render using the production profile"
 echo "-----------------------------------------------------------"
 bash ./code/shell/quarto-render-prod.sh
@@ -20,6 +22,9 @@ echo "----------------------------------------------"
 BRANCH_NAME=$(git branch --show-current)
 
 echo "Publishing $BRANCH_NAME to 'origin'"
+
+git add notebook/_site
+git commit --no-gpg-sign -m "ci(quarto): Site updated on $DATE"
 
 git push origin $BRANCH_NAME
 
