@@ -1,0 +1,4 @@
+{
+	"python.analysis.typeCheckingMode": "basic",
+	"python.defaultInterpreterPath": "~/miniforge3/envs/facsimilab/bin/python"
+}
